@@ -16,9 +16,9 @@
 <div class="card card-outline card-primary">
 	<div class="card-header">
 		<h3 class="card-title">List of Approbating Faculty</h3>
-		<div class="card-tools">
+		<!--<div class="card-tools">
 			<a href="?page=user/manage_user" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
-		</div>
+		</div>-->
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -48,13 +48,13 @@
 					hod dsai -6
 					hod ece-5
 					hod cse -4
-					normal employees - 3
+					employees - 3
 					admin - 8 -->
 					<?php 
 					$i = 1;
 						$qry = $conn->query("SELECT *,concat(firstname,' ',lastname) as name from `users` where id != '1' and id != '{$_settings->userdata('id')}' and `type` != 1 order by concat(firstname,' ',lastname) asc ");
 						while($row = $qry->fetch_assoc()):
-							if($row['type'] == 4 or $row['type'] == 5 or $row['type'] == 6 or $row['type'] == 7)
+							if($row['type'] == 4 or $row['type'] == 5 or $row['type'] == 6 or $row['type'] == 7 )
 {					?>
 						<tr>
 
@@ -85,10 +85,10 @@
 				                    <span class="sr-only">Toggle Dropdown</span>
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
-				                    <a class="dropdown-item" href="?page=user/manage_user&id=<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
-				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
-				                  </div>
+				                    <a class="dropdown-item" href="?page=user7/manage_user7&id=<?php echo $row['id'] ?>"><span class="fa fa-eye"></span> View</a>
+				                    <!--<div class="dropdown-divider"></div>
+				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php// echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
+				                  </div>-->
 							</td>
 						</tr>
 					<?php } endwhile; ?>

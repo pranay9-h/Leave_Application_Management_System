@@ -16,7 +16,7 @@
   <script>
     start_loader()
   </script>
-  <h1 class="text-center pb-4 mb-4 text-light page-header"><?php echo $_settings->info('name') ?> <br> Admin Login</h1>
+  <h1 class="text-center pb-4 mb-4 text-light page-header"><?php echo $_settings->info('name') ?> <br>Sign in / Login</h1>
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-primary">
