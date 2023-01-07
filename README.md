@@ -21,7 +21,7 @@ Our main idea is to provide a platform that follows the rules and regulations of
 
 *NORMAL USER :*
 
-![](assets\images\normal.png)
+![](assets/images/normal.png)
 
 *SUPERIOR USER :*
 
