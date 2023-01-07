@@ -11,9 +11,8 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
 	<div class="card-header">
 		<h3 class="card-title">List of Applications</h3>
 		<div class="card-tools">
-			<a href="?page=leave_applications/manage_application" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>
+			<!--<a href="?page=leave_applications/manage_application" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Create New</a>-->
 		</div>
-
 	</div>
 	<div class="card-body">
 		<div class="container-fluid">
@@ -88,16 +87,16 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
 				                  </button>
 				                  <div class="dropdown-menu" role="menu">
 								  	<a class="dropdown-item view_application" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-eye"></span> View</a>
+				                    <!--<div class="dropdown-divider"></div>
+									<?php //if($_settings->userdata('type') != 2): ?>
+				                    <a class="dropdown-item update_status" href="javascript:void(0)" data-id="<?php //echo $row['id'] ?>"><span class="fa fa-check-square"></span> Update Status</a>
 				                    <div class="dropdown-divider"></div>
-									<?php if($_settings->userdata('type') != 3): ?>
-				                    <a class="dropdown-item update_status" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-check-square"></span> Update Status</a>
+									<?php //endif; ?>
+									<?php //if($_settings->userdata('type') != 2 || ($row['status'] == '0') ): ?>
+				                    <a class="dropdown-item" href="?page=leave_applications/manage_application&id=<?php //echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
 				                    <div class="dropdown-divider"></div>
-									<?php endif; ?>
-									<?php if($_settings->userdata('type') != 3 || ($row['status'] == '0') ): ?>
-				                    <a class="dropdown-item" href="?page=leave_applications/manage_application&id=<?php echo $row['id'] ?>"><span class="fa fa-edit text-primary"></span> Edit</a>
-				                    <div class="dropdown-divider"></div>
-				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>
-									<?php endif; ?>
+				                    <a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php// echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Delete</a>-->
+									<?php //endif; ?>
 				                  </div>
 							</td>
 						</tr>

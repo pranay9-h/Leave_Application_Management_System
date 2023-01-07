@@ -31,6 +31,73 @@
                         </p>
                       </a>
                     </li> 
+                    <?php if($_settings->userdata('type') == 8): ?>
+                      <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=employees7" class="nav-link nav-employees">
+                        <i class="nav-icon fas fa-user-friends" style=" padding: 8px 8px"></i>
+                        <p>
+                          Normal Faculty List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=leave_applications7" class="nav-link nav-leave_applications">
+                        <i class="nav-icon fas fa-file-alt" style=" padding: 8px 8px"></i>
+                        <p>
+                          Leave Application List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/department" class="nav-link nav-maintenance_department">
+                        <i class="nav-icon fas fa-building" style=" padding: 8px 8px"></i>
+                        <p>
+                          Department List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/designation" class="nav-link nav-maintenance_designation">
+                        <i class="nav-icon fas fa-th-list" style=" padding: 8px 8px"></i>
+                        <p>
+                          Designation List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=maintenance/leave_type" class="nav-link nav-maintenance_leave_type">
+                        <i class="nav-icon fas fa-list" style=" padding: 8px 8px"></i>
+                        <p>
+                          Leave Type List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=user7/list7" class="nav-link nav-user_list">
+                        <i class="nav-icon fas fa-users" style=" padding: 8px 8px"></i>
+                        <p>
+                          Approbating Faculty List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=reports" class="nav-link nav-reports">
+                        <i class="nav-icon fas fa-file" style=" padding: 8px 8px"></i>
+                        <p>
+                          Date based Reports
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;" >
+                      <a href="<?php echo base_url ?>admin/?page=system_info" class="nav-link nav-system_info">
+                        <i class="nav-icon fas fa-cogs" style=" padding: 8px 8px; "></i>
+                        <p>
+                          Settings
+                        </p>
+                      </a>
+                    </li>
+                    <?php else: ?>
+                        
                     <?php if($_settings->userdata('type') == 3): ?>
                     <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
                       <a href="<?php echo base_url ?>admin/?page=employees/records&id=<?php echo $_settings->userdata('id') ?>" class="nav-link nav-records">
@@ -49,6 +116,7 @@
                         </p>
                       </a>
                     </li>
+                    
                     <?php endif; ?>
                     <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
                       <a href="<?php echo base_url ?>admin/?page=leave_applications" class="nav-link nav-leave_applications">
@@ -93,23 +161,51 @@
                         </p>
                       </a>
                     </li>
-                    <?php endif; ?>
+                      <?php endif; ?>
+
+                    <!-- need to do changes here
+                    <?php //if($_settings->userdata('type') == 7): ?>
+                      <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=admin_without_edit/department" class="nav-link nav-maintenance_department">
+                        <i class="nav-icon fas fa-building" style=" padding: 8px 8px"></i>
+                        <p>
+                          Department List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=admin_without_edit/designation" class="nav-link nav-maintenance_designation">
+                        <i class="nav-icon fas fa-th-list" style=" padding: 8px 8px"></i>
+                        <p>
+                          Designation List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=admin_without_edit/leave_type" class="nav-link nav-maintenance_leave_type">
+                        <i class="nav-icon fas fa-list" style=" padding: 8px 8px"></i>
+                        <p>
+                          Leave Type List
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
+                      <a href="<?php echo base_url ?>admin/?page=admin_without_edit/list" class="nav-link nav-user_list">
+                        <i class="nav-icon fas fa-users" style=" padding: 8px 8px"></i>
+                        <p>
+                          Approbating Faculty List
+                        </p>
+                      </a>
+                    </li>
+                    
+                    till here-->
+              
 
                     <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;">
                       <a href="<?php echo base_url ?>admin/?page=reports" class="nav-link nav-reports">
                         <i class="nav-icon fas fa-file" style=" padding: 8px 8px"></i>
                         <p>
                           Date based Reports
-                        </p>
-                      </a>
-                    </li>
-                    <?php if($_settings->userdata('type') == 1): ?>
-
-                    <li class="nav-item dropdown" style=" font-family: 'verdana', sans-serif;" >
-                      <a href="<?php echo base_url ?>admin/?page=system_info" class="nav-link nav-system_info">
-                        <i class="nav-icon fas fa-cogs" style=" padding: 8px 8px; "></i>
-                        <p>
-                          Settings
                         </p>
                       </a>
                     </li>

@@ -45,7 +45,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
 						</div>
 						<div class="form-group">
 							<label for="middlename">Middle Name</label>
-							<input type="text" name="middlename" id="middlename" class="form-control rounded-0" value="<?php echo isset($meta['middlename']) ? $meta['middlename']: '' ?>" required>
+							<input type="text" name="middlename" id="middlename" class="form-control rounded-0" value="<?php echo isset($meta['middlename']) ? $meta['middlename']: '' ?>" >
 						</div>
 						<div class="form-group">
 							<label for="lastname">Last Name</label>
