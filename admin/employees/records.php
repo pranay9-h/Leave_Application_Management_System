@@ -9,7 +9,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
     foreach($user->fetch_array() as $k =>$v){
         $$k = $v;
     }
-    $name = ucwords($lastname.', '.$firstname.' '.$middlename);
+    $name = ucwords($lastname.' '.$firstname.' '.$middlename);
 	$meta_qry = $conn->query("SELECT * FROM employee_meta where user_id = '{$_GET['id']}' ");
 	while($row = $meta_qry->fetch_assoc()){
         ${$row['meta_field']} = $row['meta_value'];

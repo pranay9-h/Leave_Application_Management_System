@@ -63,8 +63,8 @@
 							<td><?php echo ucwords($row['name']) ?></td>
 							<td >
 								<p class="m-0 ">
-									<b>Department: </b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'N/A' ?><br>
-									<b>Designation: </b><?php echo isset($desg_arr[$row['designation_id']]) ? $desg_arr[$row['designation_id']] : 'N/A' ?><br>
+									<b>Department: </b><?php echo isset($row['department_id']) ? $dept_arr[$row['department_id']] : 'N/A' ?><br>
+									<b>Designation: </b><?php echo isset($row['designation_id']) ? $desg_arr[$row['designation_id']] : 'N/A' ?><br>
 								</p>
 							</td>
 							<td align="center">
