@@ -70,19 +70,17 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
 					<div class="col-6">
 						<div class="form-group">
 							<label for="department_id">Department</label>
-							<select name="department_id" id="department_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Department here" reqiured>
-								<option value="" disabled <?php echo !isset($meta['department_id']) ? 'selected' : '' ?>></option>
-								<?php foreach($dept_arr as $k=>$v): ?>
-									<option value="<?php echo $k ?>" <?php echo (isset($meta['department_id']) && $meta['department_id'] == $k) ? 'selected' : '' ?>><?php echo $v ?></option>
-								<?php endforeach; ?>
+							<select name="department_id" id="department_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Department here" reqiured >
+							<?php foreach($dept_arr as $k=>$v): ?>
+							<option value="<?php echo $k ?>" <?php echo (isset($meta['department_id']) && $meta['department_id'] == $k) ? 'selected' : 'N/A' ?>><?php echo $v ?></option>
+						<?php endforeach; ?>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="designation_id">Designation</label>
 							<select name="designation_id" id="designation_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Designation here" reqiured>
-								<option value="" disabled <?php echo !isset($meta['designation_id']) ? 'selected' : '' ?>></option>
 								<?php foreach($desg_arr as $k=>$v): ?>
-									<option value="<?php echo $k ?>" <?php echo (isset($meta['designation_id']) && $meta['designation_id'] == $k) ? 'selected' : '' ?>><?php echo $v ?></option>
+									<option value="<?php echo $k ?>" <?php echo (isset($meta['designation_id']) && $meta['designation_id'] == $k) ? 'selected' : 'N/A' ?>><?php echo $v ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>

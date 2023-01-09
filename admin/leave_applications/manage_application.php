@@ -7,7 +7,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         }
     }
 }
-if($_settings->userdata('type') == 3){
+if($_settings->userdata('type') == 2 ){
 	$meta_qry = $conn->query("SELECT * FROM employee_meta where meta_field = 'leave_type_ids' and user_id = '{$_settings->userdata('id')}' ");
 	$leave_type_ids = $meta_qry->num_rows > 0 ? $meta_qry->fetch_array()['meta_value'] : '';
 }
@@ -33,11 +33,11 @@ if($_settings->userdata('type') == 3){
 			<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
 			<div class="row">
 				<div class="col-6">
-					<?php if($_settings->userdata('type') != 3): ?>
+					<?php if($_settings->userdata('type') !=2 or $_settings->userdata('type') != 8): ?>
 					<div class="form-group">
 						<label for="user_id" class="control-label">Employee</label>
 						<select name="user_id" id="user_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Employee here" reqiured>
-							<option value="" disabled <?php echo !isset($user_id) ? 'selected' : '' ?>></option>
+							<option value="" disabled <?php echo !isset($id) ? 'selected' : '' ?>></option>
 							<?php 
 							
 							$emp_qry = $conn->query("SELECT u.*,concat(u.lastname,' ',u.firstname,' ',u.middlename) as `name`,m.meta_value FROM `users` u inner join `employee_meta` m on u.id = m.user_id where m.meta_field='employee_id'");

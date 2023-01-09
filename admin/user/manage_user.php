@@ -31,8 +31,9 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 				</div>
 				<div class="form-group col-6">
 					<label for="password">Password</label>
+					<?php if(isset($_GET['id'])): ?>
 					<input type="password" name="password" id="password" class="form-control" value="" autocomplete="off" <?php echo isset($meta['id']) ? "": 'required' ?>>
-                    <?php if(isset($_GET['id'])): ?>
+                    
 					<small><i>Leave this blank if you dont want to change the password.</i></small>
                     <?php endif; ?>
 				</div>
@@ -61,7 +62,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
 	<div class="card-footer">
 			<div class="col-md-12">
 				<div class="row">
-					<button class="btn btn-sm btn-primary mr-2" form="manage-user">Save</button>
+					<button class="btn btn-sm btn-primary mr-2" form="manage-user" >Save</button>
 					<a class="btn btn-sm btn-secondary" href="./?page=user/list">Cancel</a>
 				</div>
 			</div>

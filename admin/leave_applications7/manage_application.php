@@ -7,7 +7,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
         }
     }
 }
-if($_settings->userdata('type') == 3){
+if($_settings->userdata('type') == 2){
 	$meta_qry = $conn->query("SELECT * FROM employee_meta where meta_field = 'leave_type_ids' and user_id = '{$_settings->userdata('id')}' ");
 	$leave_type_ids = $meta_qry->num_rows > 0 ? $meta_qry->fetch_array()['meta_value'] : '';
 }
@@ -33,7 +33,7 @@ if($_settings->userdata('type') == 3){
 			<input type="hidden" name ="id" value="<?php echo isset($id) ? $id : '' ?>">
 			<div class="row">
 				<div class="col-6">
-					<?php if($_settings->userdata('type') != 3): ?>
+					<?php if($_settings->userdata('type') != 2 ): ?>
 					<div class="form-group">
 						<label for="user_id" class="control-label">Employee</label>
 						<select name="user_id" id="user_id" class="form-control select2bs4 select2 rounded-0" data-placeholder="Please Select Employee here" reqiured>

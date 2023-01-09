@@ -10,6 +10,7 @@ $link .= "://";
 $link .= $_SERVER['HTTP_HOST']; 
 $link .= $_SERVER['REQUEST_URI'];
 if(!isset($_SESSION['userdata']) && !strpos($link, 'login.php')){
+    
 	redirect('admin/login.php');
 }
 if(isset($_SESSION['userdata']) && strpos($link, 'login.php')){
