@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2023 at 11:43 AM
+-- Generation Time: Jan 10, 2023 at 12:48 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -98,19 +98,7 @@ INSERT INTO `employee_meta` (`user_id`, `meta_field`, `meta_value`, `date_create
 (30, 'username', 'anupama', '2023-01-07 15:16:33'),
 (30, 'approver', 'off', '2023-01-07 15:16:33'),
 (30, 'leave_type_ids', '4,8,6,12,10,7,13,5,9,11,14', '2023-01-07 15:29:44'),
-(30, 'leave_type_credits', '{\"4\":\"8\",\"8\":\"15\",\"6\":\"15\",\"12\":\"280\",\"10\":\"0\",\"7\":\"0\",\"13\":\"40\",\"5\":\"15\",\"9\":\"20\",\"11\":\"30\",\"14\":\"40\"}', '2023-01-07 15:29:44'),
-(35, 'type', '3', '2023-01-07 15:42:14'),
-(35, 'employee_id', 'admin123', '2023-01-07 15:42:14'),
-(35, 'firstname', 'Admin', '2023-01-07 15:42:14'),
-(35, 'middlename', '', '2023-01-07 15:42:14'),
-(35, 'lastname', 'administrator', '2023-01-07 15:42:14'),
-(35, 'dob', '2002-02-02', '2023-01-07 15:42:14'),
-(35, 'contact', '3453452345', '2023-01-07 15:42:14'),
-(35, 'address', 'Dharwad, Karnataka', '2023-01-07 15:42:14'),
-(35, 'department_id', '1', '2023-01-07 15:42:14'),
-(35, 'designation_id', '4', '2023-01-07 15:42:14'),
-(35, 'username', 'admin', '2023-01-07 15:42:14'),
-(35, 'approver', 'off', '2023-01-07 15:42:14');
+(30, 'leave_type_credits', '{\"4\":\"8\",\"8\":\"15\",\"6\":\"15\",\"12\":\"280\",\"10\":\"0\",\"7\":\"0\",\"13\":\"40\",\"5\":\"15\",\"9\":\"20\",\"11\":\"30\",\"14\":\"40\"}', '2023-01-07 15:29:44');
 
 -- --------------------------------------------------------
 
@@ -138,7 +126,8 @@ CREATE TABLE `leave_applications` (
 --
 
 INSERT INTO `leave_applications` (`id`, `user_id`, `leave_type_id`, `reason`, `date_start`, `date_end`, `type`, `status`, `approved_by`, `leave_days`, `date_created`, `date_updated`) VALUES
-(1, 30, 4, 'festival', '2023-01-17 00:00:00', '2023-01-17 00:00:00', 1, 3, 1, 1, '2023-01-07 15:30:19', '2023-01-07 15:33:27');
+(1, 30, 4, 'festival', '2023-01-17 00:00:00', '2023-01-17 00:00:00', 1, 3, 1, 1, '2023-01-07 15:30:19', '2023-01-07 15:33:27'),
+(2, 30, 4, 'Vacation', '2023-03-30 00:00:00', '2023-03-31 00:00:00', 1, 0, NULL, 2, '2023-01-09 14:51:49', NULL);
 
 -- --------------------------------------------------------
 
@@ -211,7 +200,7 @@ CREATE TABLE `users` (
   `username` text NOT NULL,
   `password` text NOT NULL,
   `avatar` text DEFAULT NULL,
-  `last_login` datetime DEFAULT NULL,
+  `last_login` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `type` tinyint(1) NOT NULL DEFAULT 0,
   `date_added` datetime NOT NULL DEFAULT current_timestamp(),
   `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp()
@@ -222,13 +211,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `password`, `avatar`, `last_login`, `type`, `date_added`, `date_updated`) VALUES
-(1, 'Adminstrator', NULL, 'Admin', 'Director', '0192023a7bbd73250516f069df18b500', 'uploads/1624240500_avatar.png', '2022-11-27 17:42:01', 1, '2022-11-27 22:13:39', '2023-01-07 15:38:57'),
-(30, 'anupama', '', 'munagapati', 'anupama', '4bc10fe3abdf6dc1c0eed4b083bdd32d', 'uploads/30_user.jpeg', NULL, 3, '2023-01-07 14:35:10', '2023-01-07 14:35:10'),
-(31, 'Pranay', NULL, 'Soppadandi', 'pranay_s', '5a32d89a7db0403d3e710d4464949b34', 'uploads/1673085840_wateringimages.jpg', NULL, 4, '2023-01-07 15:34:28', NULL),
-(32, 'josha', NULL, 'maturi', 'josh', 'faea9239f4dc03d13fca7006dd6a2b4b', 'uploads/1673085900_gardening.jpeg', NULL, 5, '2023-01-07 15:35:03', NULL),
-(33, 'suvarna', NULL, 'V', 'suvarna_v', '26f962c341f488e399cf30e353ee178e', 'uploads/1673085900_cats.jpeg', NULL, 6, '2023-01-07 15:35:44', NULL),
-(34, 'madhurima', NULL, 'munagapati', 'madhu', '3f3fc2915c3f69458c0a65f0cf341ca1', 'uploads/1673085960_a1.jpg', NULL, 7, '2023-01-07 15:36:38', NULL),
-(35, 'Admin', '', 'administrator', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/35_user.png', NULL, 8, '2023-01-07 15:42:14', '2023-01-07 15:42:54');
+(1, 'Adminstrator', NULL, 'Admin', 'Director', 'eaae01eb4bcad3ededea38e325df5901', 'uploads/1624240500_avatar.png', '2023-01-10 11:47:31', 1, '2022-11-27 22:13:39', '2023-01-10 17:17:31'),
+(30, 'anupama', '', 'munagapati', 'anupama', '4bc10fe3abdf6dc1c0eed4b083bdd32d', 'uploads/30_user.jpeg', '2023-01-09 09:50:43', 3, '2023-01-07 14:35:10', '2023-01-09 15:20:43'),
+(31, 'Pranay', NULL, 'Soppadandi', 'pranay_s', '5a32d89a7db0403d3e710d4464949b34', 'uploads/1673085840_wateringimages.jpg', '2023-01-09 09:50:43', 4, '2023-01-07 15:34:28', '2023-01-09 15:20:43'),
+(32, 'josha', NULL, 'maturi', 'josh', 'b342a49f34b2f534e84cb9207fa9617f', 'uploads/1673085900_gardening.jpeg', '2023-01-09 09:50:43', 5, '2023-01-07 15:35:03', '2023-01-09 15:20:43'),
+(33, 'suvarna', NULL, 'V', 'suvarna_v', '26f962c341f488e399cf30e353ee178e', 'uploads/1673085900_cats.jpeg', '2023-01-09 09:50:43', 6, '2023-01-07 15:35:44', '2023-01-09 15:20:43'),
+(34, 'madhurima', NULL, 'munagapati', 'madhu', '3f3fc2915c3f69458c0a65f0cf341ca1', 'uploads/1673085960_a1.jpg', '2023-01-09 09:50:43', 7, '2023-01-07 15:36:38', '2023-01-09 15:20:43'),
+(35, 'Admin', '', 'administrator', 'admin', '0192023a7bbd73250516f069df18b500', 'uploads/35_user.png', '2023-01-09 09:50:43', 8, '2023-01-07 15:42:14', '2023-01-09 15:20:43');
 
 --
 -- Indexes for dumped tables
@@ -276,7 +265,8 @@ ALTER TABLE `system_info`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`) USING HASH;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -298,7 +288,7 @@ ALTER TABLE `designation_list`
 -- AUTO_INCREMENT for table `leave_applications`
 --
 ALTER TABLE `leave_applications`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `leave_types`
