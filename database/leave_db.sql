@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2023 at 09:35 AM
+-- Generation Time: Jan 10, 2023 at 12:48 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -211,7 +211,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `middlename`, `lastname`, `username`, `password`, `avatar`, `last_login`, `type`, `date_added`, `date_updated`) VALUES
-(1, 'Adminstrator', NULL, 'Admin', 'Director', '0192023a7bbd73250516f069df18b500', 'uploads/1624240500_avatar.png', '2023-01-09 09:50:43', 1, '2022-11-27 22:13:39', '2023-01-09 15:20:43'),
+(1, 'Adminstrator', NULL, 'Admin', 'Director', 'eaae01eb4bcad3ededea38e325df5901', 'uploads/1624240500_avatar.png', '2023-01-10 11:47:31', 1, '2022-11-27 22:13:39', '2023-01-10 17:17:31'),
 (30, 'anupama', '', 'munagapati', 'anupama', '4bc10fe3abdf6dc1c0eed4b083bdd32d', 'uploads/30_user.jpeg', '2023-01-09 09:50:43', 3, '2023-01-07 14:35:10', '2023-01-09 15:20:43'),
 (31, 'Pranay', NULL, 'Soppadandi', 'pranay_s', '5a32d89a7db0403d3e710d4464949b34', 'uploads/1673085840_wateringimages.jpg', '2023-01-09 09:50:43', 4, '2023-01-07 15:34:28', '2023-01-09 15:20:43'),
 (32, 'josha', NULL, 'maturi', 'josh', 'b342a49f34b2f534e84cb9207fa9617f', 'uploads/1673085900_gardening.jpeg', '2023-01-09 09:50:43', 5, '2023-01-07 15:35:03', '2023-01-09 15:20:43'),

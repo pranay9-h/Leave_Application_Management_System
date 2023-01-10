@@ -15,7 +15,7 @@ Our main idea is to provide a platform that follows the rules and regulations of
 |Credentials| Normal Faculty | Approbating Faculty | Super user | Admin |
 |:---:|:---:|:---:|:---:|:---:|
 |Username | anupama|pranay_s| Director| admin|
-|password | 2k2201|hodcse| admin123| admin123|
+|password | 2k2201|hodcse| director123| admin123|
 ---
 **Here are some screenshots that demonstrate the functionalities of all the users.**
 
