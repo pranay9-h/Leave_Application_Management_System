@@ -5,7 +5,7 @@ Our main idea is to provide a platform that follows the rules and regulations of
 
 *We have created 4 roles namely :*
 
-- **Normal Faculty** - The faculty who applies for leave and have minimal access.
+- **Normal Faculty** - The Faculty who applies for leave and have minimal access.
 - **Approbating Faculty** - Faculty who approves the leaves of normal faculty.
 - **Super user** - Faculty which can access all the details of both normal faculty and approbating faculty.[Here, It is Director.]
 - **Admin** - Faculty who have only view access to restricted areas and can operate on "settings" of the website.
